@@ -1,0 +1,48 @@
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+  <mat-tab *ngIf="url == 'create' || url == 'aluno,edit,' + id" label="Aluno">
+
+    <div class="form">
+      <form
+        (ngSubmit)="submitStudent()"
+        [formGroup]="alunoFm"
+        #formDir="ngForm">
+
+        <label for="nome">Nome </label>
+        <input type="text" placeholder="Nome" formControlName="nome" required />
+        <label for="cpf"> CPF </label>
+        <input type="text" placeholder="CPF" formControlName="cpf" />
+
+        <button type="submit" [disabled]="!alunoFm.valid">Enviar</button>
+      </form>
+    </div>
+  </mat-tab>
+  <mat-tab *ngIf="url == 'create' || url == 'professor,edit,' + id" label="Professor">
+    <div class="form">
+      <form (ngSubmit)="submitTeacher()" [formGroup]="professorFm" #formDir="ngForm">
+        <label for="nome">Nome</label>
+        <input type="text" placeholder="Nome" formControlName="nome" required />
+
+        <label for="cpf"> CPF </label>
+        <input type="text" placeholder="CPF" formControlName="cpf" />
+
+        <label for="especialidade"> Especialidade</label>
+        <input type="text" placeholder="Especialidade" formControlName="especialidade" />
+
+        <button type="submit" [disabled]="!professorFm.valid">Enviar</button>
+      </form>
+    </div>
+  </mat-tab>
+  <mat-tab *ngIf="url == 'create'" label="Diretor">
+    <div class="form">
+      <form (ngSubmit)="submitDirector()" [formGroup]="alunoFm" #formDir="ngForm">
+        <label for="nome">Nome </label>
+        <input type="text" placeholder="Nome" formControlName="nome" required />
+
+        <label for="cpf"> CPF </label>
+        <input type="text" placeholder="CPF" formControlName="cpf" />
+
+        <button type="submit" [disabled]="!alunoFm.valid">Enviar</button>
+      </form>
+    </div>
+  </mat-tab>
+</mat-tab-group>

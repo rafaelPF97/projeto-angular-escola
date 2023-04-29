@@ -1,0 +1,58 @@
+
+<div>
+<!--ALUNO -->
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+    <mat-tab label="Área do Aluno">
+      <h1  class="mg" style="margin-top: 15px;">Alunos:</h1>
+      <ng-container *ngFor="let aluno of alunos" style="margin: 0.5%">
+        <mat-card class="mat-card">
+          <mat-card-title>
+            <p>Nome: {{ aluno.nome }}</p>
+          </mat-card-title>
+
+          <mat-card-content>
+            <p>
+              <img
+                class="example-card"
+                mat-card-image
+                src="https://img.freepik.com/icones-gratis/concentrando-alvo-para-tirar-uma-foto_318-55386.jpg?w=2000"
+                alt="Photo"
+              />
+            </p>
+
+          </mat-card-content>
+            <button mat-button routerLink="/aluno/{{aluno.id}}" class="details-button"><mat-icon>book</mat-icon>Detalhes</button>
+        </mat-card>
+      </ng-container>
+    </mat-tab>
+<!--PROFESSOR -->
+    <mat-tab label="Área do Professor">
+      <h1 class="mg" style="margin-top: 15px;">Professores:</h1>
+      <ng-container *ngFor="let professor of professores" style="margin: 0.5%">
+        <mat-card class="mat-card">
+          <mat-card-title>
+            <p>Nome: {{ professor.nome }}</p>
+          </mat-card-title>
+
+          <mat-card-content>
+            <p>
+              <img
+                class="example-card"
+                mat-card-image
+                src="https://img.freepik.com/icones-gratis/concentrando-alvo-para-tirar-uma-foto_318-55386.jpg?w=2000"
+                alt="Photo"
+              />
+            </p>
+          </mat-card-content>
+          <button mat-button routerLink="/professor/{{professor.id}}" class="details-button"><mat-icon>book</mat-icon>Detalhes</button>
+        </mat-card>
+      </ng-container>
+
+    </mat-tab>
+<!--DIRETOR -->
+    <mat-tab label="Área do Diretor">
+      <h1 class="mg" style="margin-top: 15px;">Diretores:</h1>
+
+    </mat-tab>
+  </mat-tab-group>
+</div>

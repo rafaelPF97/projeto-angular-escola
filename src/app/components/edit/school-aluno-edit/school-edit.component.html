@@ -1,0 +1,7 @@
+
+<div *ngIf="aluno">
+  <h1>
+    Editando o Aluno(a) <span>{{aluno.nome}}</span>
+  </h1>
+<app-school-form (onSubmitStudent)="editAluno($event)" [alunoData]="aluno"></app-school-form>
+</div>
