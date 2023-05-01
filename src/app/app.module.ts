@@ -18,11 +18,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { SchoolCreateComponent } from './components/school-create/school-create.component';
 import { SchoolEditComponent } from './components/edit/school-aluno-edit/school-edit.component';
-import { DeleteFormDialogComponent } from './components/delete-form-dialog/delete-form-dialog.component';
+
 import { SchoolFormComponent } from './components/school-form/school-form.component';
 import { StudentComponent } from './components/pages/student/student.component';
 import { TeacherComponent } from './components/pages/teacher/teacher.component';
 import { SchoolProfessorEditComponent } from './components/edit/school-professor-edit/school-professor-edit.component';
+import { DirectorComponent } from './components/pages/director/director.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +32,11 @@ import { SchoolProfessorEditComponent } from './components/edit/school-professor
     SchoolListComponent,
     SchoolCreateComponent,
     SchoolEditComponent,
-    DeleteFormDialogComponent,
     SchoolFormComponent,
     StudentComponent,
     TeacherComponent,
     SchoolProfessorEditComponent,
+    DirectorComponent,
   ],
   imports: [
     HttpClientModule,

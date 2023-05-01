@@ -1,11 +1,10 @@
+import { DiretorService } from './../../shared/services/diretor.service';
+import { Diretor } from './../../shared/model/Diretor.model';
 import { Aluno } from './../../shared/model/Aluno.model';
 import { AlunoService } from '../../shared/services/aluno.service';
 import { Component, OnInit, Output } from '@angular/core';
 import { Professor } from 'src/app/shared/model/Professor.model';
 import { ProfessorService } from 'src/app/shared/services/professor.service';
-import { MatDialog } from '@angular/material/dialog';
-import { DeleteFormDialogComponent } from '../delete-form-dialog/delete-form-dialog.component';
-
 
 @Component({
   selector: 'app-school-list',
@@ -15,17 +14,18 @@ import { DeleteFormDialogComponent } from '../delete-form-dialog/delete-form-dia
 export class SchoolListComponent implements OnInit {
   alunos: Aluno[] = [];
   professores: Professor[] = [];
-
+  diretores: Diretor[] = [];
 
   constructor(
     public alunoService: AlunoService,
     public professoreService: ProfessorService,
-    public dialog: MatDialog
-
+    public diretorService: DiretorService
   ) {}
+
   ngOnInit(): void {
     this.getAlunos();
     this.getProfessores();
+    this.getDiretores();
   }
 
   getAlunos() {
@@ -40,17 +40,9 @@ export class SchoolListComponent implements OnInit {
     });
   }
 
-  deleteBtt(id: number) {
-    const dialogRef = this.dialog.open(DeleteFormDialogComponent, {
-      data: { id: id }
+  getDiretores() {
+    this.diretorService.getDiretores().subscribe((d) => {
+      this.diretores = d;
     });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-
-    });
-
-
   }
-
 }

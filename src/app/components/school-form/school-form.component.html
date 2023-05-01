@@ -4,7 +4,7 @@
     <div class="form">
       <form
         (ngSubmit)="submitStudent()"
-        [formGroup]="alunoFm"
+        [formGroup]="studentFm"
         #formDir="ngForm">
 
         <label for="nome">Nome </label>
@@ -12,13 +12,13 @@
         <label for="cpf"> CPF </label>
         <input type="text" placeholder="CPF" formControlName="cpf" />
 
-        <button type="submit" [disabled]="!alunoFm.valid">Enviar</button>
+        <button type="submit" [disabled]="!studentFm.valid">Enviar</button>
       </form>
     </div>
   </mat-tab>
   <mat-tab *ngIf="url == 'create' || url == 'professor,edit,' + id" label="Professor">
     <div class="form">
-      <form (ngSubmit)="submitTeacher()" [formGroup]="professorFm" #formDir="ngForm">
+      <form (ngSubmit)="submitTeacher()" [formGroup]="teacherFm" #formDir="ngForm">
         <label for="nome">Nome</label>
         <input type="text" placeholder="Nome" formControlName="nome" required />
 
@@ -28,20 +28,20 @@
         <label for="especialidade"> Especialidade</label>
         <input type="text" placeholder="Especialidade" formControlName="especialidade" />
 
-        <button type="submit" [disabled]="!professorFm.valid">Enviar</button>
+        <button type="submit" [disabled]="!teacherFm.valid">Enviar</button>
       </form>
     </div>
   </mat-tab>
   <mat-tab *ngIf="url == 'create'" label="Diretor">
     <div class="form">
-      <form (ngSubmit)="submitDirector()" [formGroup]="alunoFm" #formDir="ngForm">
+      <form (ngSubmit)="submitDirector()" [formGroup]="directorFm" #formDir="ngForm">
         <label for="nome">Nome </label>
         <input type="text" placeholder="Nome" formControlName="nome" required />
 
         <label for="cpf"> CPF </label>
         <input type="text" placeholder="CPF" formControlName="cpf" />
 
-        <button type="submit" [disabled]="!alunoFm.valid">Enviar</button>
+        <button type="submit" [disabled]="!directorFm.valid">Enviar</button>
       </form>
     </div>
   </mat-tab>

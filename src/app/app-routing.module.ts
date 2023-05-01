@@ -1,3 +1,4 @@
+import { DirectorComponent } from './components/pages/director/director.component';
 import { TeacherComponent } from './components/pages/teacher/teacher.component';
 import { NgModule } from '@angular/core';
 import { Routes } from '@angular/router';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'create', component: SchoolCreateComponent },
   { path: 'aluno/edit/:id', component: SchoolEditComponent },
   { path: 'professor/:id', component: TeacherComponent },
+  { path: 'diretor/:id', component: DirectorComponent},
   { path: 'aluno/:id', component: StudentComponent },
   { path: 'form', component: SchoolFormComponent },
 ];
