@@ -1,0 +1,19 @@
+
+.edit-button{
+  background-color: royalblue;
+  color: azure;
+}
+.delete-button{
+  margin-left: 1%;
+  background-color: firebrick;
+  color: azure;
+}
+
+.teacher {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}

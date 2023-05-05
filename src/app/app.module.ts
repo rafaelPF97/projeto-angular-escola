@@ -24,6 +24,7 @@ import { StudentComponent } from './components/pages/student/student.component';
 import { TeacherComponent } from './components/pages/teacher/teacher.component';
 import { SchoolProfessorEditComponent } from './components/edit/school-professor-edit/school-professor-edit.component';
 import { DirectorComponent } from './components/pages/director/director.component';
+import { SchoolDiretorEditComponent } from './components/edit/school-diretor-edit/school-diretor-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DirectorComponent } from './components/pages/director/director.componen
     TeacherComponent,
     SchoolProfessorEditComponent,
     DirectorComponent,
+    SchoolDiretorEditComponent,
   ],
   imports: [
     HttpClientModule,

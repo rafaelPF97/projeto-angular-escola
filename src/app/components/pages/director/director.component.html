@@ -1,1 +1,13 @@
-<p>director works!</p>
+<div class="diretor" *ngIf="diretor">
+  <h1>Nome: {{ diretor.nome }}</h1>
+  <div >
+    <button
+      mat-button
+      routerLink="/diretor/edit/{{ diretor.id }}"
+      class="edit-button"
+    >
+      <mat-icon>edit</mat-icon>Editar
+    </button>
+    <button mat-button class="delete-button" (click)="removeDiretor(diretor.id!)"><mat-icon>delete</mat-icon>Excluir</button>
+  </div>
+</div>

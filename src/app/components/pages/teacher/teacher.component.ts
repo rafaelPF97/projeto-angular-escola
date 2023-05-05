@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { Professor } from './../../../shared/model/Professor.model';
+import { Professor } from '../../../shared/models/Professor.model';
 import { ProfessorService } from './../../../shared/services/professor.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ProfessorService } from './../../../shared/services/professor.service';
   styleUrls: ['./teacher.component.css'],
 })
 export class TeacherComponent implements OnInit {
-  professor?: Professor
+  professor?: Professor;
 
   constructor(
     private professorService: ProfessorService,
@@ -20,5 +20,11 @@ export class TeacherComponent implements OnInit {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
+
+    this.professorService.getProfessor(id).subscribe((professorSalvo) => {
+      this.professor = professorSalvo;
+    });
   }
+
+  removeTeacher(id: number) {}
 }

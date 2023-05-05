@@ -1,9 +1,9 @@
 import { DiretorService } from './../../shared/services/diretor.service';
-import { Diretor } from './../../shared/model/Diretor.model';
-import { Aluno } from './../../shared/model/Aluno.model';
+import { Diretor } from '../../shared/models/Diretor.model';
+import { Aluno } from '../../shared/models/Aluno.model';
 import { AlunoService } from '../../shared/services/aluno.service';
 import { Component, OnInit, Output } from '@angular/core';
-import { Professor } from 'src/app/shared/model/Professor.model';
+import { Professor } from 'src/app/shared/models/Professor.model';
 import { ProfessorService } from 'src/app/shared/services/professor.service';
 
 @Component({

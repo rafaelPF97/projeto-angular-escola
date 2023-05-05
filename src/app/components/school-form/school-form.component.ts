@@ -2,9 +2,9 @@ import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Professor } from './../../shared/model/Professor.model';
-import { Aluno } from './../../shared/model/Aluno.model';
-import { Diretor } from 'src/app/shared/model/Diretor.model';
+import { Professor } from '../../shared/models/Professor.model';
+import { Aluno } from '../../shared/models/Aluno.model';
+import { Diretor } from 'src/app/shared/models/Diretor.model';
 
 @Component({
   selector: 'app-school-form',

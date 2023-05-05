@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { Aluno } from 'src/app/shared/model/Aluno.model';
+import { Aluno } from 'src/app/shared/models/Aluno.model';
 import { AlunoService } from 'src/app/shared/services/aluno.service';
 
 @Component({

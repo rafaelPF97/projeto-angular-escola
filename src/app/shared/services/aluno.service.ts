@@ -1,4 +1,4 @@
-import { Aluno } from 'src/app/shared/model/Aluno.model';
+import { Aluno } from 'src/app/shared/models/Aluno.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';

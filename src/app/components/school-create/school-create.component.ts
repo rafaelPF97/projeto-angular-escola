@@ -1,8 +1,8 @@
 import { DiretorService } from './../../shared/services/diretor.service';
-import { Diretor } from './../../shared/model/Diretor.model';
-import { Professor } from './../../shared/model/Professor.model';
+import { Diretor } from '../../shared/models/Diretor.model';
+import { Professor } from '../../shared/models/Professor.model';
 import { AlunoService } from './../../shared/services/aluno.service';
-import { Aluno } from './../../shared/model/Aluno.model';
+import { Aluno } from '../../shared/models/Aluno.model';
 import { ProfessorService } from 'src/app/shared/services/professor.service';
 
 import { ActivatedRoute, Router } from '@angular/router';

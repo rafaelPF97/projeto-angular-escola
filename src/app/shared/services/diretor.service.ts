@@ -1,4 +1,4 @@
-import { Diretor } from './../model/Diretor.model';
+import { Diretor } from '../models/Diretor.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
