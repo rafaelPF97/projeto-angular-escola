@@ -32,7 +32,7 @@
       </form>
     </div>
   </mat-tab>
-  <mat-tab *ngIf="url == 'create'" label="Diretor">
+  <mat-tab *ngIf="url == 'create' || url == 'diretor,edit,' + id" label="Diretor">
     <div class="form">
       <form (ngSubmit)="submitDirector()" [formGroup]="directorFm" #formDir="ngForm">
         <label for="nome">Nome </label>

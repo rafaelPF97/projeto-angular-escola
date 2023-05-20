@@ -26,5 +26,12 @@ export class TeacherComponent implements OnInit {
     });
   }
 
-  removeTeacher(id: number) {}
+  async removeTeacher(id: number) {
+    await this.professorService.deleteProfessor(id).subscribe();
+
+    await this.router.navigate(['/']);
+    
+    location.reload();
+  }
+
 }

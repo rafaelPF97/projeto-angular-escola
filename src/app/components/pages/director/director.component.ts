@@ -26,7 +26,11 @@ export class DirectorComponent implements OnInit {
     });
   }
 
-  removeDiretor(id: number){
+  async removeDiretor(id: number) {
+    await this.diretorService.deleteDiretor(id).subscribe();
 
+    await this.router.navigate(['/']);
+
+    location.reload();
   }
 }

@@ -16,6 +16,8 @@ export class SchoolFormComponent implements OnInit {
   @Output() onSubmitTeacher = new EventEmitter<Professor>();
   @Output() onSubmitDirector = new EventEmitter<Diretor>();
   @Input() alunoData!: Aluno;
+  @Input() diretorData!: Diretor;
+  @Input() professorData!: Professor;
   url: string = '';
   id!: string;
 
@@ -31,17 +33,17 @@ export class SchoolFormComponent implements OnInit {
   });
 
   teacherFm: FormGroup = new FormGroup({
-    nome: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    cpf: new FormControl('', [
+    nome: new FormControl(this.professorData ? this.professorData.nome : '', [Validators.required, Validators.minLength(3)]),
+    cpf: new FormControl(this.professorData ? this.professorData.cpf : '', [
       Validators.required,
       Validators.pattern('\\d{11}'),
     ]),
-    especialidade: new FormControl('', Validators.required),
+    especialidade: new FormControl(this.professorData ? this.professorData.especialidade : '', Validators.required),
   });
 
   directorFm: FormGroup = new FormGroup({
-    nome: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    cpf: new FormControl('', [
+    nome: new FormControl(this.diretorData ? this.diretorData.nome : '', [Validators.required, Validators.minLength(3)]),
+    cpf: new FormControl(this.diretorData ? this.diretorData.cpf :'', [
       Validators.required,
       Validators.pattern('\\d{11}'),
     ]),

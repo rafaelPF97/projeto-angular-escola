@@ -29,6 +29,8 @@ export class StudentComponent implements OnInit {
   async removeStudent(id: number){
     await this.alunoService.deleteAluno(id).subscribe();
 
-    this.router.navigate(['/']);
+    await this.router.navigate(['/']);
+    
+    location.reload();
   }
 }
