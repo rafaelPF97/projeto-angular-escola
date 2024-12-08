@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "escolafeliz:build:production"
+              "buildTarget": "escolafeliz:build:production"
             },
             "development": {
-              "browserTarget": "escolafeliz:build:development"
+              "buildTarget": "escolafeliz:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "escolafeliz:build"
+            "buildTarget": "escolafeliz:build"
           }
         },
         "test": {
