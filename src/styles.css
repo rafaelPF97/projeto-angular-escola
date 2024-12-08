@@ -1,4 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-button:not(:disabled) {
+  color: azure !important;
+}
+
+.mat-mdc-text-field-wrapper {
+  height: 38px !important;
+}
+
+.mat-mdc-form-field:not(.mat-form-field-disabled) .mat-mdc-floating-label.mdc-floating-label {
+  padding-bottom: 16px !important;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+  padding-top: 8px !important;
+  padding-bottom: 0 !important;
+}

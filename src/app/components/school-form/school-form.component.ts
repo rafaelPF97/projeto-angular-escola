@@ -62,6 +62,18 @@ export class SchoolFormComponent {
     return this.route.snapshot.url.toString();
   }
 
+  get isDirectorEdit() {
+    return this.url.includes('diretor') && this.url.includes('edit');
+  }
+
+  get isTeacherEdit() {
+    return this.url.includes('professor') && this.url.includes('edit');
+  }
+
+  get isStudentEdit() {
+    return this.url.includes('aluno') && this.url.includes('edit');
+  }
+
   get id() {
     return this.route.snapshot.params['id'];
   }

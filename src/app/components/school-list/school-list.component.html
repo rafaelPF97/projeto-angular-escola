@@ -2,23 +2,15 @@
   <!--ALUNO -->
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
     <mat-tab label="Área do Aluno">
-      <h1 class="mg" style="margin-top: 15px">Alunos:</h1>
-      <ng-container *ngFor="let aluno of alunos" style="margin: 0.5%">
+      <h1>Alunos:</h1>
+      <div class="container">
+        @for (aluno of alunos; track $index) {
         <mat-card class="mat-card">
-          <mat-card-title>
+          <mat-card-title class="card-title">
             <p>Nome: {{ aluno.nome }}</p>
           </mat-card-title>
 
-          <mat-card-content>
-            <p>
-              <img
-                class="example-card"
-                mat-card-image
-                src="https://img.freepik.com/icones-gratis/concentrando-alvo-para-tirar-uma-foto_318-55386.jpg?w=2000"
-                alt="Photo"
-              />
-            </p>
-          </mat-card-content>
+          <!-- <mat-card-content> </mat-card-content> -->
           <button
             mat-button
             routerLink="/aluno/{{ aluno.id }}"
@@ -27,27 +19,23 @@
             <mat-icon>book</mat-icon>Detalhes
           </button>
         </mat-card>
-      </ng-container>
+        } @empty {
+        <p>Nenhum aluno cadastrado.</p>
+        }
+      </div>
     </mat-tab>
+
     <!--PROFESSOR -->
     <mat-tab label="Área do Professor">
-      <h1 class="mg" style="margin-top: 15px">Professores:</h1>
-      <ng-container *ngFor="let professor of professores" style="margin: 0.5%">
+      <h1>Professores:</h1>
+      <div class="container">
+        @for (professor of professores; track $index) {
         <mat-card class="mat-card">
-          <mat-card-title>
+          <mat-card-title class="card-title">
             <p>Nome: {{ professor.nome }}</p>
           </mat-card-title>
 
-          <mat-card-content>
-            <p>
-              <img
-                class="example-card"
-                mat-card-image
-                src="https://img.freepik.com/icones-gratis/concentrando-alvo-para-tirar-uma-foto_318-55386.jpg?w=2000"
-                alt="Photo"
-              />
-            </p>
-          </mat-card-content>
+          <!-- <mat-card-content> </mat-card-content> -->
           <button
             mat-button
             routerLink="/professor/{{ professor.id }}"
@@ -56,32 +44,35 @@
             <mat-icon>book</mat-icon>Detalhes
           </button>
         </mat-card>
-      </ng-container>
+        }@empty {
+        <p>Nenhum professor cadastrado.</p>
+        }
+      </div>
     </mat-tab>
+
     <!--DIRETOR -->
     <mat-tab label="Área do Diretor">
-      <h1 class="mg" style="margin-top: 15px">Diretores:</h1>
-      <ng-container *ngFor="let diretor of diretores" style="margin: 0.5%">
+      <h1>Diretores:</h1>
+      <div class="container">
+        @for (diretor of diretores; track $index) {
         <mat-card class="mat-card">
-          <mat-card-title>
+          <mat-card-title class="card-title">
             <p>Nome: {{ diretor.nome }}</p>
           </mat-card-title>
 
-          <mat-card-content>
-            <p>
-              <img
-                class="example-card"
-                mat-card-image
-                src="https://img.freepik.com/icones-gratis/concentrando-alvo-para-tirar-uma-foto_318-55386.jpg?w=2000"
-                alt="Photo"
-              />
-            </p>
-          </mat-card-content>
-          <button mat-button routerLink="/diretor/{{diretor.id}}" class="details-button">
+          <!-- <mat-card-content> </mat-card-content> -->
+          <button
+            mat-button
+            routerLink="/diretor/{{ diretor.id }}"
+            class="details-button"
+          >
             <mat-icon>book</mat-icon>Detalhes
           </button>
         </mat-card>
-      </ng-container>
+        } @empty {
+        <p>Nenhum diretor cadastrado.</p>
+        }
+      </div>
     </mat-tab>
   </mat-tab-group>
 </div>

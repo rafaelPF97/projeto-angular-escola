@@ -1,6 +1,9 @@
 <div *ngIf="diretor">
   <h1>
-    Editando o Diretor(a) <span>{{diretor.nome}}</span>
+    Editando o Diretor(a) <span>{{ diretor.nome }}</span>
   </h1>
-<app-school-form (onSubmitDirector)="editDiretor($event)" [diretorData]="diretor"></app-school-form>
+  <app-school-form
+    (onSubmitDirector)="editDiretor($event)"
+    [diretorData]="diretor"
+  ></app-school-form>
 </div>

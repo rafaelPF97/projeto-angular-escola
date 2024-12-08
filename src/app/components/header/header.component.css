@@ -1,7 +1,15 @@
-.example-spacer {
-  margin-right: 1em;
-  
+.container {
+  display: flex;
+  gap: 32px;
+}
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: inherit;
+  gap: 4px;
 }
 
 .example-button-container {

@@ -1,23 +1,37 @@
-.example-card {
-  max-width: 200px;
+h1 {
+  margin-top: 16px;
+  margin-left: 42px;
+  padding: 16px;
 }
+
+p {
+  padding: 16px 8px 32px 8px;
+}
+
+.card-title {
+  padding: 16px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-left: 64px;
+}
+
 .mat-card{
-  display: inline-grid;
   max-width: 400px;
   border: 1px solid #CFD8DC;
-  border-radius: 4px 3px 6px / 2px 4px;
+  border-bottom: none;
+  border-radius: 6px;
   padding-top: 15px;
   padding-left: 0%;
   padding-right: 0%;
   padding-bottom: 0%;
-  margin: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
-.mg{
-  margin-left: 10px;
-}
+
 .details-button{
+  border-radius: 0 0 6px 6px;
   background-color: burlywood;
-  color: azure;
-
 }
-

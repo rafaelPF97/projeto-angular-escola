@@ -1,6 +1,9 @@
 <div *ngIf="professor">
   <h1>
-    Editando o Professor(a) <span>{{professor.nome}}</span>
+    Editando o Professor(a) <span>{{ professor.nome }}</span>
   </h1>
-<app-school-form (onSubmitTeacher)="editProfessor($event)" [professorData]="professor"></app-school-form>
+  <app-school-form
+    (onSubmitTeacher)="editProfessor($event)"
+    [professorData]="professor"
+  ></app-school-form>
 </div>
