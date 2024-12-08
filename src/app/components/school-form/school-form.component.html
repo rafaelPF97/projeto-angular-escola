@@ -1,45 +1,80 @@
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
   <mat-tab *ngIf="url == 'create' || url == 'aluno,edit,' + id" label="Aluno">
-
     <div class="form">
       <form
         (ngSubmit)="submitStudent()"
         [formGroup]="studentFm"
-        #formDir="ngForm">
-
+        #formDir="ngForm"
+      >
         <label for="nome">Nome </label>
-        <input type="text" placeholder="Nome" formControlName="nome" required />
+        <input type="text" placeholder="Nome" formControlName="nome" />
         <label for="cpf"> CPF </label>
-        <input type="text" placeholder="CPF" formControlName="cpf" />
+        <input
+          type="text"
+          placeholder="CPF"
+          formControlName="cpf"
+          [imask]="{ mask: '000.000.000-00' }"
+          [unmask]="'typed'"
+        />
 
         <button type="submit" [disabled]="!studentFm.valid">Enviar</button>
       </form>
     </div>
   </mat-tab>
-  <mat-tab *ngIf="url == 'create' || url == 'professor,edit,' + id" label="Professor">
+  <mat-tab
+    *ngIf="url == 'create' || url == 'professor,edit,' + id"
+    label="Professor"
+  >
     <div class="form">
-      <form (ngSubmit)="submitTeacher()" [formGroup]="teacherFm" #formDir="ngForm">
+      <form
+        (ngSubmit)="submitTeacher()"
+        [formGroup]="teacherFm"
+        #formDir="ngForm"
+      >
         <label for="nome">Nome</label>
-        <input type="text" placeholder="Nome" formControlName="nome" required />
+        <input type="text" placeholder="Nome" formControlName="nome" />
 
         <label for="cpf"> CPF </label>
-        <input type="text" placeholder="CPF" formControlName="cpf" />
+        <input
+          type="text"
+          placeholder="CPF"
+          formControlName="cpf"
+          [imask]="{ mask: '000.000.000-00' }"
+          [unmask]="'typed'"
+        />
 
         <label for="especialidade"> Especialidade</label>
-        <input type="text" placeholder="Especialidade" formControlName="especialidade" />
+        <input
+          type="text"
+          placeholder="Especialidade"
+          formControlName="especialidade"
+        />
 
         <button type="submit" [disabled]="!teacherFm.valid">Enviar</button>
       </form>
     </div>
   </mat-tab>
-  <mat-tab *ngIf="url == 'create' || url == 'diretor,edit,' + id" label="Diretor">
+  <mat-tab
+    *ngIf="url == 'create' || url == 'diretor,edit,' + id"
+    label="Diretor"
+  >
     <div class="form">
-      <form (ngSubmit)="submitDirector()" [formGroup]="directorFm" #formDir="ngForm">
+      <form
+        (ngSubmit)="submitDirector()"
+        [formGroup]="directorFm"
+        #formDir="ngForm"
+      >
         <label for="nome">Nome </label>
-        <input type="text" placeholder="Nome" formControlName="nome" required />
+        <input type="text" placeholder="Nome" formControlName="nome" />
 
         <label for="cpf"> CPF </label>
-        <input type="text" placeholder="CPF" formControlName="cpf" />
+        <input
+          type="text"
+          placeholder="CPF"
+          formControlName="cpf"
+          [imask]="{ mask: '000.000.000-00' }"
+          [unmask]="'typed'"
+        />
 
         <button type="submit" [disabled]="!directorFm.valid">Enviar</button>
       </form>
